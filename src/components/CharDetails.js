@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: 0,
-    // paddingTop: '40%', // 16:9
+    paddingTop: '120%', // 16:9
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -63,8 +63,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function CharDetails(props) {
   const classes = useStyles();
-
-  console.log('LOCATION : ', props.location.state);
 
   return (
     <Card className={classes.root}>
