@@ -47,6 +47,7 @@ class Home extends Component {
                 charData.push(response.data);
                 self.setState({ character: charData });
               });
+              return null;
             }),
         );
       }
@@ -65,9 +66,8 @@ class Home extends Component {
           handleChange={this.handleChange}
           locationVal={locationVal}
         />
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-          {character &&
-            character.length > 0 &&
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
+          {character && character.length > 0 ? (
             character.map(item => {
               return (
                 <CharacterCard
@@ -81,7 +81,12 @@ class Home extends Component {
                   type={item.type ? item.type : 'unkown'}
                 />
               );
-            })}
+            })
+          ) : (
+            <div style={{ fontSize: '25px' }}>
+              <div>NO CURRENT RESIDETIAL IS THERE SO PLEASE SELECT OTHER LOCATION</div>
+            </div>
+          )}
         </div>
       </div>
     );

@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Avatar from '@material-ui/core/Avatar';
-import { grey, red } from '@material-ui/core/colors';
+import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
   },
   media: {
     height: 0,
-    paddingTop: '100%', // 16:9
+    // paddingTop: '40%', // 16:9
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: '30px',
     fontWeight: 'bold',
     paddingLeft: '10px',
-    color: '#ffffff',
     color: '#f1f1f1',
     '&:hover': {
       color: '#fdad5c',

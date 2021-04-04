@@ -3,11 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
-import { grey, red } from '@material-ui/core/colors';
+import { grey } from '@material-ui/core/colors';
 import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -41,7 +38,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: '30px',
     fontWeight: 'bold',
     paddingLeft: '10px',
-    color: '#ffffff',
     color: '#f1f1f1',
     '&:hover': {
       color: '#fdad5c',
