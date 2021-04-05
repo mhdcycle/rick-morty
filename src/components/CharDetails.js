@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Avatar from '@material-ui/core/Avatar';
 import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
@@ -26,13 +25,7 @@ const useStyles = makeStyles(theme => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    backgroundColor: grey[500],
-    fontSize: 50,
-    height: 70,
-    width: 70,
-    color: grey[100],
-  },
+
   name: {
     fontSize: '30px',
     fontWeight: 'bold',
@@ -41,7 +34,6 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: '#fdad5c',
     },
-    cursor: 'pointer',
   },
   green: {
     fontSize: '24px',
@@ -67,11 +59,6 @@ export default function CharDetails(props) {
   return (
     <Card className={classes.root}>
       <CardHeader
-        avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            {props.location.state.name[0]}
-          </Avatar>
-        }
         title={
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <div className={classes.label}>Name : </div>
