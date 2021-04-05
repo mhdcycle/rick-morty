@@ -7,7 +7,7 @@ import { grey } from '@material-ui/core/colors';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '550px',
+    width: '800px',
     backgroundColor: grey[600],
     margin: '20px',
   },

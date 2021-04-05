@@ -9,7 +9,7 @@ import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: '550px',
+    width: '800px',
     backgroundColor: grey[600],
     margin: '20px',
   },
@@ -43,6 +43,7 @@ const useStyles = makeStyles(theme => ({
       color: '#fdad5c',
     },
     cursor: 'pointer',
+    // width: '80%',
   },
   green: {
     fontSize: '24px',
@@ -59,6 +60,7 @@ const useStyles = makeStyles(theme => ({
   label: {
     fontSize: '30px',
     color: '#ffffff',
+    // width: '30%',
   },
 }));
 
@@ -95,11 +97,9 @@ export default function CharacterCard(props) {
               <div style={{ fontSize: '24px', color: 'white' }}>Status : </div>
               <div className={props.status === 'Alive' ? classes.green : classes.red}>{props.status}</div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%' }}>
-              <div style={{ fontSize: '24px', color: 'white', width: '100%' }}>Last Known Location : </div>
-              <div
-                style={{ fontSize: '30px', fontWeight: 'bold', paddingLeft: '10px', color: '#ffffff', width: '100%' }}
-              >
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div style={{ fontSize: '24px', color: 'white' }}>Last Known Location : </div>
+              <div style={{ fontSize: '30px', fontWeight: 'bold', paddingLeft: '10px', color: '#ffffff' }}>
                 {props.knownLocation}
               </div>
             </div>
