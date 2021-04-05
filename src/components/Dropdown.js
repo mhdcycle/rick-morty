@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
   selectEmpty: {
     marginTop: theme.spacing(2),
   },
+  label: {
+    fontSize: '40px',
+  },
 }));
 
 export default function Dropdown(props) {
@@ -22,12 +25,15 @@ export default function Dropdown(props) {
   return (
     <div>
       <FormControl variant="filled" className={classes.formControl}>
-        <InputLabel id="demo-simple-select-filled-label">{props.label}</InputLabel>
+        <InputLabel id="demo-simple-select-filled-label" style={{ fontSize: '20px', fontWeight: 'bold' }}>
+          {props.label}
+        </InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
           value={props.locationVal}
           onChange={props.handleChange}
+          className={classes.label}
         >
           {props.location.map(loc => {
             return <MenuItem value={loc.key}>{loc.name}</MenuItem>;
